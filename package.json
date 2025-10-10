@@ -2,6 +2,7 @@
   "name": "mysterymessage-nextjs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -9,7 +10,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-email/container": "^0.0.15",
+    "@react-email/heading": "^0.0.15",
+    "@react-email/html": "^0.0.11",
+    "@react-email/render": "^1.3.2",
+    "@react-email/section": "^0.0.16",
+    "@react-email/text": "^0.1.5",
     "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.3",
     "mongoose": "^8.18.2",
     "next": "15.5.4",
     "next-auth": "^4.24.11",
