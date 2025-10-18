@@ -45,3 +45,18 @@ export async function POST(request: Request) {
     }, { status: 500}) 
     }
 }
+
+export async function GET(request: Request) {
+    await dbConnect();
+    const foundUser = await UserModel.findById(userId);
+    if (!foundUser) {
+        return Response.json({
+            success: false,
+            message: "User not found"
+        }, { status: 404})
+    }
+    return Response.json({
+        success: true,
+        data: foundUser.accpectMessage
+    }, { status: 200})
+}
